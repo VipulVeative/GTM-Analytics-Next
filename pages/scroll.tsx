@@ -1,9 +1,15 @@
 import React from 'react';
+import Head from 'next/head';
 
-export default function scrollPage(){
+export default function scrollPage() {
 
     return (
-        <div>This is scroll page</div>
+        <>
+            <Head>
+                <title>Home page</title>
+            </Head>
+            <div>This is scroll page</div>
+        </>
     )
 
 }
