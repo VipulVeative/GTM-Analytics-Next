@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import React from 'react'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -17,38 +19,31 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+         Google Tag Manager and Google Analytics with NextJS and Typescript 
         </p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          <Link href="/view" className={styles.card}>
+          <div className={styles.outerDiv}>
+            <h2>View Page &rarr;</h2>
+            <p>Collects data on page view!</p>
+            </div>
+          </Link>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          <Link href="/scroll" className={styles.card}>
+          <div className={styles.outerDiv}>
+            <h2>Scroll Page &rarr;</h2>
+            <p>Collects data on scroll page!</p>
+            </div>
+          </Link>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <Link href="/click" className={styles.card}>
+          <div className={styles.outerDiv}>
+            <h2>Click Page &rarr;</h2>
+            <p>Collects data on click!</p>
+            </div>
+          </Link>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
         </div>
       </main>
 
