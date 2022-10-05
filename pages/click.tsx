@@ -4,8 +4,7 @@ import Head from 'next/head';
 export default function clickPage(){
 
     const eventHandle=()=>{
-        console.log("hiii");
-        gtag('event', 'click', {'pageName': 'Click.tsx','time':new Date()});
+        gtag('event', 'click', {'pageName': 'click.tsx','time':new Date()});
    
        }
 

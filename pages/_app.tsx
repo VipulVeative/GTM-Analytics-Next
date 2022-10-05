@@ -4,9 +4,31 @@ import React from 'react'
 import { AppProps } from 'next/app';
 
 
-function MyApp({ Component, pageProps }:AppProps) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
+
+      <Script
+        id="gtag-ga4"
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-B9E791TX3T`}
+      />
+
+      <Script
+        id="gtag-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-B9E791TX3T', {
+          page_path: window.location.pathname,
+        });
+        `
+        }}
+      />
+
       <Script
         strategy="afterInteractive"
         id="gtm-script"
