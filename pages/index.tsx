@@ -1,10 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Link from 'next/link'
 
 export default function Home() {
+
+  useEffect(()=>{
+    gtag('event', 'home', {'pageName': 'home.tsx','type':"testing"});
+  },[])
+
   return (
     <div className={styles.container}>
       <Head>
@@ -23,13 +28,7 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <Link href="/view" className={styles.card}>
-          <div className={styles.outerDiv}>
-            <h2>View Page &rarr;</h2>
-            <p>Collects data on page view!</p>
-            </div>
-          </Link>
-
+     
           <Link href="/scroll" className={styles.card}>
           <div className={styles.outerDiv}>
             <h2>Scroll Page &rarr;</h2>
