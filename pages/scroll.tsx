@@ -6,7 +6,7 @@ export default function scrollPage() {
     return (
         <>
             <Head>
-                <title>Home page</title>
+                <title>Scroll page</title>
             </Head>
             <div>This is scroll page</div>
         </>
